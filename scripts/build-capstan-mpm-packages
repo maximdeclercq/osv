@@ -236,9 +236,9 @@ build_and_publish_mpm() {
   local osv_image_suffix="$2"
  
   if [ "$osv_image_suffix" == "" ]; then
-    build_osv_image $app_or_module_name selected none
+    build_osv_image $app_or_module_name all none
   else
-    build_osv_image "$app_or_module_name,$app_or_module_name.$osv_image_suffix" selected none
+    build_osv_image "$app_or_module_name,$app_or_module_name.$osv_image_suffix" all none
   fi
   build_mpm $app_or_module_name
 }
